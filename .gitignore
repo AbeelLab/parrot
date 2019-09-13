@@ -1,2 +1,6 @@
 *.class
 *.log
+/bin/
+/.gradle/
+/.cache-main
+/build/
