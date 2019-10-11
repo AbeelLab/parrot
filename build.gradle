@@ -12,6 +12,8 @@ apply plugin: 'java'
 apply plugin: 'scala'
 apply plugin: 'eclipse'
 
+
+
 // In this section you declare where to find the dependencies of your project
 repositories {
     // Use jcenter for resolving your dependencies.
@@ -25,6 +27,23 @@ repositories {
     
 }
 
+
+sourceSets {
+    main {
+        java {
+            srcDir 'src/main/scala'
+        }
+        scala {
+            srcDir 'src/main/scala'
+        }
+        resources {
+            srcDirs "src/main/resources"
+        }
+    }
+    
+ }
+
+
 dependencies {
 
 
@@ -33,11 +52,14 @@ dependencies {
 	compile name: 'sam-1.105'
 	compile group: 'org.apache.commons', name: 'commons-math3', version: '3.0'
 	
-	compile 'org.scala-lang:scala-library:2.12.3'
+	compile group: 'org.scala-lang', name: 'scala-library', version:'2.12.4'
+	
+}
 
-    
-    // Use JUnit test framework
-    testImplementation 'junit:junit:4.12'
+task run(type: JavaExec, dependsOn: classes) {
+    main = 'abeellab.parrot.ParrotConsole'
+    classpath sourceSets.main.runtimeClasspath
+    classpath configurations.runtime
 }
 
 task fatJar(type: Jar) {
