@@ -9,3 +9,21 @@
 	<natures>
 	</natures>
 </projectDescription>
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>parrot</name>
+	<comment></comment>
+	<projects/>
+	<natures>
+		<nature>org.scala-ide.sdt.core.scalanature</nature>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+	</natures>
+	<buildSpec>
+		<buildCommand>
+			<name>org.scala-ide.sdt.core.scalabuilder</name>
+			<arguments/>
+		</buildCommand>
+	</buildSpec>
+	<linkedResources/>
+	<filteredResources/>
+</projectDescription>
