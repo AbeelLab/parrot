@@ -28,7 +28,7 @@ object ParrotConsole extends Tool {
     "rflp-is6110" -> RFLPTyper,
     "spoligotype" -> LorikeetSpoligotyper,
     "spoligo-multitype" -> MultiTyping,
-    "macaw" ->MacawSNPtyper
+    "lineage" ->MacawSNPtyper
     )
   def main(args: Array[String]): Unit = {
 
