@@ -35,6 +35,8 @@ import java.util.HashMap
  */
 object MacawSNPtyper extends Main {
 
+  override def description = "Determines the lineage(s) of a MTB sequencing sample. Reports relative abundance of multiple lineages if present, i.e. mixed infections. Typing is done through a marker set."
+  
   override val version = """
     2015/01/16:    Initial release
     2015/03/03:    Changed output logic to only output a single marker type for all files by default
